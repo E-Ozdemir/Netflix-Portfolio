@@ -1,23 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<link rel="stylesheet" type="text/css" href="file.css"> <!--link head kisminda veriliyor css icin-->
-	<style>
-		body { background-color: #264A59; }
-		p {color:black;} /*bu bir internal css komut satiri. Inline in önceligi var bu yüzden bu satir uygulanmaz*/
-
-	</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1><i>What is Lorem Ipsum?</i></h1>
-<h2>What is Lorem Ipsum?</h2>
-<h3>What is Lorem Ipsum?</h3>
-<h4>What is Lorem Ipsum?</h4>
-<h5>What is Lorem Ipsum?</h5>
-<h6>What is Lorem Ipsum?</h6>
-<a href="https://www.clarusway.com">Clarusway</a>
-<hr>
-<a href="https://github.com/E-Ozdemir/Python_Assignments/blob/a200c8bdbc02b23cc2b9b86881186851cada4d64/Armstrong_Num.py">Armstrong Number</a>
-<p style="color: white; background-color: #F7370E ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    
+
+    <div id="form-container">      
+        <header id="form-header">
+            <h1 id="form-title">NET<span>FLIX</span></h1>
+            <h3 id="form-description">Thank you for signing up to Netflix.Tell me more about yourself.</h3>
+        </header>
+        <section id="Survey-form-container">
+            <div id="survey-form">
+                <form action="result.html" method="GET" target="_blank">
+                    <div class="input-box">
+                        <label for="name">Name</label><br>
+                        <input type="text" name="name" id="name" placeholder="Enter your name...">
+                    </div>
+                    <div class="input-box">
+                        <label for="age">Age</label><br>
+                        <input type="number" name="age" id="age" placeholder="Enter your age...">
+                    </div>
+                    <div class="input-box">
+                        <label for="email">E-Mail</label><br>
+                        <input type="email" name="email" id="email" placeholder="Enter your e-mail...">
+                    </div>
+                    <div class="input-box">
+                        <label>Content Type</label><br>
+                        <select name="content" id="dropdown">
+                            <option value="movies">Movies</option>
+                            <option value="series" selected>Series</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <label>Movie Type</label><br>
+                        <input type="checkbox" id="first-check" name="movie1" value="Comedy">
+                        <label for="first-check">Comedy</label><br>
+                        <input type="checkbox" id="second-check" name="movie2" value="Action">
+                        <label for="second-check">Action</label><br>
+                        <input type="checkbox" id="third-check" name="movie3" value="Romance">
+                        <label for="third-check">Romance</label>
+
+                    </div>
+                    <div class="input-box">
+                        <label>Gender</label><br>
+                        <input type="radio" id="first-radio" name="gender" value="male"><!--tek kutu secilebildigi icin name ler ayni-->
+                        <label for="first-radio">Male</label><br>
+                        <input type="radio" id="second-radio" name="gender" value="female">
+                        <label for="first-radio">Male</label><br>
+                        <input type="radio" id="third-radio" name="gender" value="other">
+                        <label for="third-radio">Other</label><br>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="feedback">Feed Back</label><br>
+                        <textarea name="message" id="feedback" cols="30" rows="10" placeholder="Any Comment..." style="resize: none;"></textarea>
+                    </div>
+
+                    <div id="form-submit">
+                        <button type="submit" id="form-button">Send</button>
+
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+   
+
 </body>
 </html>
